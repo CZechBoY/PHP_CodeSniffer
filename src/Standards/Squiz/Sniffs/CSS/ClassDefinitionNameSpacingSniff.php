@@ -27,7 +27,7 @@ class ClassDefinitionNameSpacingSniff implements Sniff
     /**
      * Returns the token types that this sniff is interested in.
      *
-     * @return stsring[]
+     * @return string[]
      */
     public function register()
     {

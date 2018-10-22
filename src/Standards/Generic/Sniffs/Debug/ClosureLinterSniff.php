@@ -21,21 +21,21 @@ class ClosureLinterSniff implements Sniff
      *
      * All other error codes will show warnings.
      *
-     * @var int
+     * @var int[]
      */
     public $errorCodes = [];
 
     /**
      * A list of error codes to ignore.
      *
-     * @var int
+     * @var int[]
      */
     public $ignoreCodes = [];
 
     /**
      * A list of tokenizers this sniff supports.
      *
-     * @var array
+     * @var string[]
      */
     public $supportedTokenizers = ['JS'];
 

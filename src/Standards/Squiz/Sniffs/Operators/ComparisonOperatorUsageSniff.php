@@ -29,7 +29,7 @@ class ComparisonOperatorUsageSniff implements Sniff
     /**
      * A list of valid comparison operators.
      *
-     * @var array<string, bool>
+     * @var array<int|string, bool>
      */
     private static $validOps = [
         T_IS_IDENTICAL        => true,

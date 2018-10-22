@@ -215,7 +215,7 @@ final class Tokens
     /**
      * Tokens that represent assignments.
      *
-     * @var array<int|string, int>
+     * @var array<int|string, int|string>
      */
     public static $assignmentTokens = [
         T_EQUAL          => T_EQUAL,
@@ -253,7 +253,7 @@ final class Tokens
     /**
      * Tokens that represent comparison operator.
      *
-     * @var array<int|string, int>
+     * @var array<int|string, int|string>
      */
     public static $comparisonTokens = [
         T_IS_EQUAL            => T_IS_EQUAL,
@@ -271,7 +271,7 @@ final class Tokens
     /**
      * Tokens that represent arithmetic operators.
      *
-     * @var array<int|string, int>
+     * @var array<int|string, int|string>
      */
     public static $arithmeticTokens = [
         T_PLUS     => T_PLUS,
@@ -285,7 +285,7 @@ final class Tokens
     /**
      * Tokens that perform operations.
      *
-     * @var array<int|string, int>
+     * @var array<int|string, int|string>
      */
     public static $operators = [
         T_MINUS       => T_MINUS,
@@ -319,7 +319,7 @@ final class Tokens
     /**
      * Tokens that represent casting.
      *
-     * @var array<int|string, int>
+     * @var array<int|string, int|string>
      */
     public static $castTokens = [
         T_INT_CAST    => T_INT_CAST,
@@ -335,7 +335,7 @@ final class Tokens
     /**
      * Token types that open parenthesis.
      *
-     * @var array<int|string, int>
+     * @var array<int|string, int|string>
      */
     public static $parenthesisOpeners = [
         T_ARRAY    => T_ARRAY,
@@ -354,7 +354,7 @@ final class Tokens
     /**
      * Tokens that are allowed to open scopes.
      *
-     * @var array<int|string, int>
+     * @var array<int|string, int|string>
      */
     public static $scopeOpeners = [
         T_CLASS      => T_CLASS,
@@ -411,7 +411,7 @@ final class Tokens
     /**
      * Tokens that open code blocks.
      *
-     * @var array<int|string, int>
+     * @var array<int|string, int|string>
      */
     public static $blockOpeners = [
         T_OPEN_CURLY_BRACKET  => T_OPEN_CURLY_BRACKET,
@@ -423,7 +423,7 @@ final class Tokens
     /**
      * Tokens that don't represent code.
      *
-     * @var array<int|string, int>
+     * @var array<int|string, int|string>
      */
     public static $emptyTokens = [
         T_WHITESPACE             => T_WHITESPACE,
@@ -445,7 +445,7 @@ final class Tokens
     /**
      * Tokens that are comments.
      *
-     * @var array<int|string, int>
+     * @var array<int|string, int|string>
      */
     public static $commentTokens = [
         T_COMMENT                => T_COMMENT,
@@ -466,7 +466,7 @@ final class Tokens
     /**
      * Tokens that are comments containing PHPCS instructions.
      *
-     * @var array<int|string, int>
+     * @var array<int|string, int|string>
      */
     public static $phpcsCommentTokens = [
         T_PHPCS_ENABLE      => T_PHPCS_ENABLE,
@@ -481,7 +481,7 @@ final class Tokens
      *
      * Note that T_STRINGS are NOT represented in this list.
      *
-     * @var array<int|string, int>
+     * @var array<int|string, int|string>
      */
     public static $stringTokens = [
         T_CONSTANT_ENCAPSED_STRING => T_CONSTANT_ENCAPSED_STRING,
@@ -491,7 +491,7 @@ final class Tokens
     /**
      * Tokens that represent text strings.
      *
-     * @var array<int|string, int>
+     * @var array<int|string, int|string>
      */
     public static $textStringTokens = [
         T_CONSTANT_ENCAPSED_STRING => T_CONSTANT_ENCAPSED_STRING,
@@ -504,7 +504,7 @@ final class Tokens
     /**
      * Tokens that represent brackets and parenthesis.
      *
-     * @var array<int|string, int>
+     * @var array<int|string, int|string>
      */
     public static $bracketTokens = [
         T_OPEN_CURLY_BRACKET   => T_OPEN_CURLY_BRACKET,
@@ -530,7 +530,7 @@ final class Tokens
     /**
      * Tokens that make up a heredoc string.
      *
-     * @var array<int|string, int>
+     * @var array<int|string, int|string>
      */
     public static $heredocTokens = [
         T_START_HEREDOC => T_START_HEREDOC,
@@ -547,7 +547,7 @@ final class Tokens
      * Mostly, these are just strings. But PHP tokenizes some language
      * constructs and functions using their own tokens.
      *
-     * @var array<int|string, int>
+     * @var array<int|string, int|string>
      */
     public static $functionNameTokens = [
         T_STRING       => T_STRING,
@@ -567,7 +567,7 @@ final class Tokens
     /**
      * Tokens that are open class and object scopes.
      *
-     * @var array<int|string, int>
+     * @var array<int|string, int|string>
      */
     public static $ooScopeTokens = [
         T_CLASS      => T_CLASS,

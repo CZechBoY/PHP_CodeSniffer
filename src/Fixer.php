@@ -60,7 +60,7 @@ class Fixer
      * We don't allow the same token to be fixed more than once each time
      * through a file as this can easily cause conflicts between sniffs.
      *
-     * @var int[]
+     * @var string[]
      */
     private $fixedTokens = [];
 
@@ -70,7 +70,7 @@ class Fixer
      * If a token is being "fixed" back to its last value, the fix is
      * probably conflicting with another.
      *
-     * @var array<int, string>
+     * @var array<int, array<string, int|string>>
      */
     private $oldTokenValues = [];
 
@@ -342,7 +342,7 @@ class Fixer
     /**
      * Start recording actions for a changeset.
      *
-     * @return void
+     * @return void|false
      */
     public function beginChangeset()
     {

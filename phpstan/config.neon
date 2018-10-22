@@ -1,6 +1,7 @@
 parameters:
     ignoreErrors:
         - '~^Variable \$\w+ might not be defined\.$~'
+        - '~^Undefined variable: \$phpCodeSnifferConfig$~'
 
     dynamicConstantNames:
         - PHP_CODESNIFFER_IN_TESTS

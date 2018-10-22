@@ -87,7 +87,7 @@ class Ruleset
      * The key is the token name being listened for and the value
      * is the sniff object.
      *
-     * @var array<int, array<string, array<string, string>>>
+     * @var array<int, array<string, array<string, string|array<string, string>>>>
      */
     public $tokenListeners = [];
 
