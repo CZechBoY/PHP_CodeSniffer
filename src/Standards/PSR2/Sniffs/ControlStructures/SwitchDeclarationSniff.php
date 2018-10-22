@@ -235,7 +235,7 @@ class SwitchDeclarationSniff implements Sniff
      * @param int                         $stackPtr  The position to start looking at.
      * @param int                         $end       The position to stop looking at.
      *
-     * @return bool
+     * @return int|false
      */
     private function findNestedTerminator($phpcsFile, $stackPtr, $end)
     {

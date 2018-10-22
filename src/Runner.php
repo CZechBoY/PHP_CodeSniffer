@@ -49,7 +49,7 @@ class Runner
     /**
      * Run the PHPCS script.
      *
-     * @return array
+     * @return array|int
      */
     public function runPHPCS()
     {
@@ -149,7 +149,7 @@ class Runner
     /**
      * Run the PHPCBF script.
      *
-     * @return array
+     * @return array|int
      */
     public function runPHPCBF()
     {
@@ -550,7 +550,7 @@ class Runner
      * @param string $file    The path of the file that raised the error.
      * @param int    $line    The line number the error was raised at.
      *
-     * @return void
+     * @return true
      */
     public function handleErrors($code, $message, $file, $line)
     {

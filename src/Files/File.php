@@ -2315,7 +2315,7 @@ class File
      * @param int $stackPtr The position of the token we are checking.
      * @param int $type     The type of token to search for.
      *
-     * @return int
+     * @return int|false
      */
     public function getCondition($stackPtr, $type)
     {

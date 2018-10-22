@@ -38,7 +38,7 @@ class CodeAnalyzerSniff implements Sniff
      * @param int                         $stackPtr  The position in the stack where
      *                                               the token was found.
      *
-     * @return int
+     * @return void|int
      */
     public function process(File $phpcsFile, $stackPtr)
     {

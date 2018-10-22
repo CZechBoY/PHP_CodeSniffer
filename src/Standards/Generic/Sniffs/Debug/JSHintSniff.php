@@ -44,7 +44,7 @@ class JSHintSniff implements Sniff
      * @param int                         $stackPtr  The position in the stack where
      *                                               the token was found.
      *
-     * @return void
+     * @return void|int
      * @throws \PHP_CodeSniffer\Exceptions\RuntimeException If jshint.js could not be run
      */
     public function process(File $phpcsFile, $stackPtr)

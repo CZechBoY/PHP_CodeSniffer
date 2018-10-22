@@ -46,7 +46,7 @@ class Ruleset
      * The key is the regular expression and the value is the type
      * of ignore pattern (absolute or relative).
      *
-     * @var array<string, string>
+     * @var array<string, array<string, string>>
      */
     public $ignorePatterns = [];
 
@@ -67,7 +67,7 @@ class Ruleset
      * The key is the fully qualified name of the sniff class
      * and the value is the sniff object.
      *
-     * @var array<string, \PHP_CodeSniffer\Sniffs\Sniff>
+     * @var array<string, \PHP_CodeSniffer\Sniffs\Sniff|string|null>
      */
     public $sniffs = [];
 
@@ -87,7 +87,7 @@ class Ruleset
      * The key is the token name being listened for and the value
      * is the sniff object.
      *
-     * @var array<int, \PHP_CodeSniffer\Sniffs\Sniff>
+     * @var array<int, array<string, array<string, string>>>
      */
     public $tokenListeners = [];
 

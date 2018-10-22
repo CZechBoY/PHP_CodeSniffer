@@ -50,7 +50,7 @@ class Config
      *                          2: ruleset and file parsing output
      *                          3: sniff execution output
      * bool     interactive     Enable interactive checking mode.
-     * bool     parallel        Check files in parallel.
+     * int      parallel        Check files in N parallel processes.
      * bool     cache           Enable the use of the file cache.
      * string   cacheFile       A file where the cache data should be written
      * bool     colors          Display colours in output.
@@ -298,7 +298,7 @@ class Config
      *
      * @param array<string, mixed> $settings The array of config settings.
      *
-     * @return void
+     * @return array<string, mixed>
      */
     public function setSettings($settings)
     {

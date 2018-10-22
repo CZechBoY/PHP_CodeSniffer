@@ -250,7 +250,7 @@ abstract class AbstractPatternSniff implements Sniff
      * @param int                         $stackPtr    The position in the tokens stack where
      *                                                 the listening token type was found.
      *
-     * @return array
+     * @return array|false
      */
     protected function processPattern($patternInfo, File $phpcsFile, $stackPtr)
     {

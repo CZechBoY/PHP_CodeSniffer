@@ -21,14 +21,14 @@ class ClosureLinterSniff implements Sniff
      *
      * All other error codes will show warnings.
      *
-     * @var integer
+     * @var int
      */
     public $errorCodes = [];
 
     /**
      * A list of error codes to ignore.
      *
-     * @var integer
+     * @var int
      */
     public $ignoreCodes = [];
 
@@ -59,7 +59,7 @@ class ClosureLinterSniff implements Sniff
      * @param int                         $stackPtr  The position in the stack where
      *                                               the token was found.
      *
-     * @return void
+     * @return void|int
      * @throws \PHP_CodeSniffer\Exceptions\RuntimeException If jslint.js could not be run
      */
     public function process(File $phpcsFile, $stackPtr)

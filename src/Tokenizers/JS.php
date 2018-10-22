@@ -916,7 +916,7 @@ class JS extends Tokenizer
      * @param string $chars  An array of characters being tokenized.
      * @param string $tokens The current array of tokens found in the string.
      *
-     * @return array<string, string>|null
+     * @return array<string, int|string>|null
      */
     public function getRegexToken($char, $string, $chars, $tokens)
     {

@@ -45,7 +45,7 @@ class ArbitraryParenthesesSpacingSniff implements Sniff
     /**
      * Returns an array of tokens this test wants to listen for.
      *
-     * @return array
+     * @return string[]
      */
     public function register()
     {
@@ -81,7 +81,7 @@ class ArbitraryParenthesesSpacingSniff implements Sniff
      * @param int                         $stackPtr  The position of the current token in
      *                                               the stack passed in $tokens.
      *
-     * @return void
+     * @return void|int
      */
     public function process(File $phpcsFile, $stackPtr)
     {

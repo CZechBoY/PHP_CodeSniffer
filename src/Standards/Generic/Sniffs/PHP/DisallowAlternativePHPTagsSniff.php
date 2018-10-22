@@ -28,7 +28,7 @@ class DisallowAlternativePHPTagsSniff implements Sniff
     /**
      * The current PHP version.
      *
-     * @var integer
+     * @var int
      */
     private $phpVersion = null;
 
@@ -36,7 +36,7 @@ class DisallowAlternativePHPTagsSniff implements Sniff
     /**
      * Returns an array of tokens this test wants to listen for.
      *
-     * @return array
+     * @return int[]
      */
     public function register()
     {

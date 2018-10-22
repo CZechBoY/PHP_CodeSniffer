@@ -29,7 +29,7 @@ class ComparisonOperatorUsageSniff implements Sniff
     /**
      * A list of valid comparison operators.
      *
-     * @var array
+     * @var array<string, bool>
      */
     private static $validOps = [
         T_IS_IDENTICAL        => true,
@@ -44,7 +44,7 @@ class ComparisonOperatorUsageSniff implements Sniff
     /**
      * A list of invalid operators with their alternatives.
      *
-     * @var array<int, string>
+     * @var array<string, array<int|string, string>>
      */
     private static $invalidOps = [
         'PHP' => [
@@ -62,7 +62,7 @@ class ComparisonOperatorUsageSniff implements Sniff
     /**
      * Registers the token types that this sniff wishes to listen to.
      *
-     * @return array
+     * @return array<int|string>
      */
     public function register()
     {

@@ -28,7 +28,7 @@ abstract class Tokenizer
      *
      * @var string
      */
-    protected $eolChar = [];
+    protected $eolChar;
 
     /**
      * A token-based representation of the content.
@@ -52,7 +52,7 @@ abstract class Tokenizer
     public $ignoredLines = [];
 
     /**
-     * @var array<int, bool>
+     * @var array<int|string, bool>
      */
     private $tokensWithTabs;
 

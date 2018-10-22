@@ -18,7 +18,7 @@ class GitMergeConflictSniff implements Sniff
     /**
      * A list of tokenizers this sniff supports.
      *
-     * @var array
+     * @var string[]
      */
     public $supportedTokenizers = [
         'PHP',
@@ -30,7 +30,7 @@ class GitMergeConflictSniff implements Sniff
     /**
      * Returns an array of tokens this test wants to listen for.
      *
-     * @return array
+     * @return int[]
      */
     public function register()
     {
@@ -46,7 +46,7 @@ class GitMergeConflictSniff implements Sniff
      * @param int                         $stackPtr  The position of the current token in the
      *                                               stack passed in $tokens.
      *
-     * @return void
+     * @return void|int
      */
     public function process(File $phpcsFile, $stackPtr)
     {
