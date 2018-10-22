@@ -911,10 +911,10 @@ class JS extends Tokenizer
      *
      * If a regular expression is not found, NULL is returned.
      *
-     * @param int $char   The index of the possible regex start character.
-     * @param string $string The complete content of the string being tokenized.
-     * @param string $chars  An array of characters being tokenized.
-     * @param string $tokens The current array of tokens found in the string.
+     * @param int                             $char   The index of the possible regex start character.
+     * @param string                          $string The complete content of the string being tokenized.
+     * @param string[]                        $chars  An array of characters being tokenized.
+     * @param array<int, array<string, bool>> $tokens The current array of tokens found in the string.
      *
      * @return array<string, int|string>|null
      */

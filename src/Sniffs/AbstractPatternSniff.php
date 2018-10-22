@@ -850,8 +850,8 @@ abstract class AbstractPatternSniff implements Sniff
     /**
      * Creates a skip pattern.
      *
-     * @param string $pattern The pattern being parsed.
-     * @param string $from    The token content that the skip pattern starts from.
+     * @param array<int, string> $pattern The pattern being parsed.
+     * @param int                $from    The token content that the skip pattern starts from.
      *
      * @return array The pattern step.
      * @see    createTokenPattern()

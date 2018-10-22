@@ -156,7 +156,7 @@ class Config
     /**
      * Command line values that the user has supplied directly.
      *
-     * @var array<string, TRUE>
+     * @var array<string, bool|array<string, bool>>
      */
     private static $overriddenDefaults = [];
 
