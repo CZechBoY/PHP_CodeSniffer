@@ -127,7 +127,7 @@ class Filter extends \RecursiveFilterIterator
      * Ensures that the ignore patterns are preserved so they don't have
      * to be generated each time.
      *
-     * @return \RecursiveIterator
+     * @return static
      */
     public function getChildren()
     {

@@ -77,7 +77,7 @@ abstract class ExactMatch extends Filter
      * Ensures that the blacklist and whitelist are preserved so they don't have
      * to be generated each time.
      *
-     * @return \RecursiveIterator
+     * @return Filter
      */
     public function getChildren()
     {

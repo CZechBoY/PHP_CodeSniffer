@@ -22,7 +22,7 @@ class FileList implements \Iterator, \Countable
     /**
      * A list of file paths that are included in the list.
      *
-     * @var array
+     * @var array<string, \PHP_CodeSniffer\Files\File|null>
      */
     private $files = [];
 
@@ -194,7 +194,7 @@ class FileList implements \Iterator, \Countable
     /**
      * Return the file path of the current file being processed.
      *
-     * @return void
+     * @return string
      */
     public function key()
     {

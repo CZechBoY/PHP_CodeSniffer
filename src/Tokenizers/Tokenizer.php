@@ -10,6 +10,7 @@
 namespace PHP_CodeSniffer\Tokenizers;
 
 use PHP_CodeSniffer\Exceptions\RuntimeException;
+use PHP_CodeSniffer\Exceptions\TokenizerException;
 use PHP_CodeSniffer\Util;
 
 abstract class Tokenizer
@@ -50,6 +51,38 @@ abstract class Tokenizer
      */
     public $ignoredLines = [];
 
+    /**
+     * @var array<int, bool>
+     */
+    private $tokensWithTabs;
+
+    /**
+     * @var int
+     */
+    private $numTokens;
+
+    /**
+     * A list of tokens that are allowed to open a scope.
+     *
+     * This array also contains information about what kind of token the scope
+     * opener uses to open and close the scope, if the token strictly requires
+     * an opener, if the token can share a scope closer, and who it can be shared
+     * with. An example of a token that shares a scope closer is a CASE scope.
+     *
+     * @var array
+     */
+    public $scopeOpeners = [];
+
+    /**
+     * A list of tokens that end the scope.
+     *
+     * This array is just a unique collection of the end tokens
+     * from the _scopeOpeners array. The data is duplicated here to
+     * save time during parsing of the file.
+     *
+     * @var array
+     */
+    public $endScopeTokens = [];
 
     /**
      * Initialise and run the tokenizer.

@@ -1,0 +1,14 @@
+parameters:
+    ignoreErrors:
+        - '~^Variable \$\w+ might not be defined\.$~'
+
+    dynamicConstantNames:
+        - PHP_CODESNIFFER_IN_TESTS
+        - PHP_CODESNIFFER_CBF
+        - PHP_CODESNIFFER_VERBOSITY
+
+services:
+    -
+        class: PHP_CodeSniffer\PHPStan\ConfigReflectionExtension
+        tags:
+            - phpstan.broker.propertiesClassReflectionExtension

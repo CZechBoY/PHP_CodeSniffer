@@ -67,7 +67,7 @@ class Ruleset
      * The key is the fully qualified name of the sniff class
      * and the value is the sniff object.
      *
-     * @var array<string, \PHP_CodeSniffer\Sniff>
+     * @var array<string, \PHP_CodeSniffer\Sniffs\Sniff>
      */
     public $sniffs = [];
 
@@ -87,7 +87,7 @@ class Ruleset
      * The key is the token name being listened for and the value
      * is the sniff object.
      *
-     * @var array<int, \PHP_CodeSniffer\Sniff>
+     * @var array<int, \PHP_CodeSniffer\Sniffs\Sniff>
      */
     public $tokenListeners = [];
 
@@ -836,9 +836,9 @@ class Ruleset
     /**
      * Processes a rule from a ruleset XML file, overriding built-in defaults.
      *
-     * @param SimpleXMLElement $rule      The rule object from a ruleset XML file.
-     * @param string[]         $newSniffs An array of sniffs that got included by this rule.
-     * @param int              $depth     How many nested processing steps we are in.
+     * @param \SimpleXMLElement $rule      The rule object from a ruleset XML file.
+     * @param string[]          $newSniffs An array of sniffs that got included by this rule.
+     * @param int               $depth     How many nested processing steps we are in.
      *                                    This is only used for debug output.
      *
      * @return void
@@ -1066,7 +1066,7 @@ class Ruleset
     /**
      * Determine if an element should be processed or ignored.
      *
-     * @param SimpleXMLElement $element An object from a ruleset XML file.
+     * @param \SimpleXMLElement $element An object from a ruleset XML file.
      *
      * @return bool
      */

@@ -256,7 +256,6 @@ class JS extends Tokenizer
      * @param \PHP_CodeSniffer\Config $config  The config data for the run.
      * @param string                  $eolChar The EOL char used in the content.
      *
-     * @return void
      * @throws TokenizerException If the file appears to be minified.
      */
     public function __construct($content, Config $config, $eolChar='\n')
@@ -265,7 +264,7 @@ class JS extends Tokenizer
             throw new TokenizerException('File appears to be minified and cannot be processed');
         }
 
-        return parent::__construct($content, $config, $eolChar);
+        parent::__construct($content, $config, $eolChar);
 
     }//end __construct()
 
@@ -450,8 +449,7 @@ class JS extends Tokenizer
                     $i,
                     $string,
                     $chars,
-                    $tokens,
-                    $this->eolChar
+                    $tokens
                 );
 
                 if ($regex !== null) {
@@ -913,12 +911,12 @@ class JS extends Tokenizer
      *
      * If a regular expression is not found, NULL is returned.
      *
-     * @param string $char   The index of the possible regex start character.
+     * @param int $char   The index of the possible regex start character.
      * @param string $string The complete content of the string being tokenized.
      * @param string $chars  An array of characters being tokenized.
      * @param string $tokens The current array of tokens found in the string.
      *
-     * @return void
+     * @return array<string, string>|null
      */
     public function getRegexToken($char, $string, $chars, $tokens)
     {

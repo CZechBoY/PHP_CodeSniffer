@@ -52,7 +52,7 @@ class Config
      * bool     interactive     Enable interactive checking mode.
      * bool     parallel        Check files in parallel.
      * bool     cache           Enable the use of the file cache.
-     * bool     cacheFile       A file where the cache data should be written
+     * string   cacheFile       A file where the cache data should be written
      * bool     colors          Display colours in output.
      * bool     explain         Explain the coding standards.
      * bool     local           Process local files in directories only (no recursion).

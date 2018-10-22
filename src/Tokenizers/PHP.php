@@ -15,6 +15,8 @@ class PHP extends Tokenizer
 {
 
 
+
+
     /**
      * A list of tokens that are allowed to open a scope.
      *
@@ -26,239 +28,239 @@ class PHP extends Tokenizer
      * @var array
      */
     public $scopeOpeners = [
-        T_IF            => [
-            'start'  => [
+        T_IF => [
+            'start' => [
                 T_OPEN_CURLY_BRACKET => T_OPEN_CURLY_BRACKET,
-                T_COLON              => T_COLON,
+                T_COLON => T_COLON,
             ],
-            'end'    => [
+            'end' => [
                 T_CLOSE_CURLY_BRACKET => T_CLOSE_CURLY_BRACKET,
-                T_ENDIF               => T_ENDIF,
-                T_ELSE                => T_ELSE,
-                T_ELSEIF              => T_ELSEIF,
+                T_ENDIF => T_ENDIF,
+                T_ELSE => T_ELSE,
+                T_ELSEIF => T_ELSEIF,
             ],
             'strict' => false,
             'shared' => false,
-            'with'   => [
-                T_ELSE   => T_ELSE,
+            'with' => [
+                T_ELSE => T_ELSE,
                 T_ELSEIF => T_ELSEIF,
             ],
         ],
-        T_TRY           => [
-            'start'  => [T_OPEN_CURLY_BRACKET => T_OPEN_CURLY_BRACKET],
-            'end'    => [T_CLOSE_CURLY_BRACKET => T_CLOSE_CURLY_BRACKET],
+        T_TRY => [
+            'start' => [T_OPEN_CURLY_BRACKET => T_OPEN_CURLY_BRACKET],
+            'end' => [T_CLOSE_CURLY_BRACKET => T_CLOSE_CURLY_BRACKET],
             'strict' => true,
             'shared' => false,
-            'with'   => [],
+            'with' => [],
         ],
-        T_CATCH         => [
-            'start'  => [T_OPEN_CURLY_BRACKET => T_OPEN_CURLY_BRACKET],
-            'end'    => [T_CLOSE_CURLY_BRACKET => T_CLOSE_CURLY_BRACKET],
+        T_CATCH => [
+            'start' => [T_OPEN_CURLY_BRACKET => T_OPEN_CURLY_BRACKET],
+            'end' => [T_CLOSE_CURLY_BRACKET => T_CLOSE_CURLY_BRACKET],
             'strict' => true,
             'shared' => false,
-            'with'   => [],
+            'with' => [],
         ],
-        T_FINALLY       => [
-            'start'  => [T_OPEN_CURLY_BRACKET => T_OPEN_CURLY_BRACKET],
-            'end'    => [T_CLOSE_CURLY_BRACKET => T_CLOSE_CURLY_BRACKET],
+        T_FINALLY => [
+            'start' => [T_OPEN_CURLY_BRACKET => T_OPEN_CURLY_BRACKET],
+            'end' => [T_CLOSE_CURLY_BRACKET => T_CLOSE_CURLY_BRACKET],
             'strict' => true,
             'shared' => false,
-            'with'   => [],
+            'with' => [],
         ],
-        T_ELSE          => [
-            'start'  => [
+        T_ELSE => [
+            'start' => [
                 T_OPEN_CURLY_BRACKET => T_OPEN_CURLY_BRACKET,
-                T_COLON              => T_COLON,
+                T_COLON => T_COLON,
             ],
-            'end'    => [
+            'end' => [
                 T_CLOSE_CURLY_BRACKET => T_CLOSE_CURLY_BRACKET,
-                T_ENDIF               => T_ENDIF,
+                T_ENDIF => T_ENDIF,
             ],
             'strict' => false,
             'shared' => false,
-            'with'   => [
-                T_IF     => T_IF,
+            'with' => [
+                T_IF => T_IF,
                 T_ELSEIF => T_ELSEIF,
             ],
         ],
-        T_ELSEIF        => [
-            'start'  => [
+        T_ELSEIF => [
+            'start' => [
                 T_OPEN_CURLY_BRACKET => T_OPEN_CURLY_BRACKET,
-                T_COLON              => T_COLON,
+                T_COLON => T_COLON,
             ],
-            'end'    => [
+            'end' => [
                 T_CLOSE_CURLY_BRACKET => T_CLOSE_CURLY_BRACKET,
-                T_ENDIF               => T_ENDIF,
-                T_ELSE                => T_ELSE,
-                T_ELSEIF              => T_ELSEIF,
+                T_ENDIF => T_ENDIF,
+                T_ELSE => T_ELSE,
+                T_ELSEIF => T_ELSEIF,
             ],
             'strict' => false,
             'shared' => false,
-            'with'   => [
-                T_IF   => T_IF,
+            'with' => [
+                T_IF => T_IF,
                 T_ELSE => T_ELSE,
             ],
         ],
-        T_FOR           => [
-            'start'  => [
+        T_FOR => [
+            'start' => [
                 T_OPEN_CURLY_BRACKET => T_OPEN_CURLY_BRACKET,
-                T_COLON              => T_COLON,
+                T_COLON => T_COLON,
             ],
-            'end'    => [
+            'end' => [
                 T_CLOSE_CURLY_BRACKET => T_CLOSE_CURLY_BRACKET,
-                T_ENDFOR              => T_ENDFOR,
+                T_ENDFOR => T_ENDFOR,
             ],
             'strict' => false,
             'shared' => false,
-            'with'   => [],
+            'with' => [],
         ],
-        T_FOREACH       => [
-            'start'  => [
+        T_FOREACH => [
+            'start' => [
                 T_OPEN_CURLY_BRACKET => T_OPEN_CURLY_BRACKET,
-                T_COLON              => T_COLON,
+                T_COLON => T_COLON,
             ],
-            'end'    => [
+            'end' => [
                 T_CLOSE_CURLY_BRACKET => T_CLOSE_CURLY_BRACKET,
-                T_ENDFOREACH          => T_ENDFOREACH,
+                T_ENDFOREACH => T_ENDFOREACH,
             ],
             'strict' => false,
             'shared' => false,
-            'with'   => [],
+            'with' => [],
         ],
-        T_INTERFACE     => [
-            'start'  => [T_OPEN_CURLY_BRACKET => T_OPEN_CURLY_BRACKET],
-            'end'    => [T_CLOSE_CURLY_BRACKET => T_CLOSE_CURLY_BRACKET],
+        T_INTERFACE => [
+            'start' => [T_OPEN_CURLY_BRACKET => T_OPEN_CURLY_BRACKET],
+            'end' => [T_CLOSE_CURLY_BRACKET => T_CLOSE_CURLY_BRACKET],
             'strict' => true,
             'shared' => false,
-            'with'   => [],
+            'with' => [],
         ],
-        T_FUNCTION      => [
-            'start'  => [T_OPEN_CURLY_BRACKET => T_OPEN_CURLY_BRACKET],
-            'end'    => [T_CLOSE_CURLY_BRACKET => T_CLOSE_CURLY_BRACKET],
+        T_FUNCTION => [
+            'start' => [T_OPEN_CURLY_BRACKET => T_OPEN_CURLY_BRACKET],
+            'end' => [T_CLOSE_CURLY_BRACKET => T_CLOSE_CURLY_BRACKET],
             'strict' => true,
             'shared' => false,
-            'with'   => [],
+            'with' => [],
         ],
-        T_CLASS         => [
-            'start'  => [T_OPEN_CURLY_BRACKET => T_OPEN_CURLY_BRACKET],
-            'end'    => [T_CLOSE_CURLY_BRACKET => T_CLOSE_CURLY_BRACKET],
+        T_CLASS => [
+            'start' => [T_OPEN_CURLY_BRACKET => T_OPEN_CURLY_BRACKET],
+            'end' => [T_CLOSE_CURLY_BRACKET => T_CLOSE_CURLY_BRACKET],
             'strict' => true,
             'shared' => false,
-            'with'   => [],
+            'with' => [],
         ],
-        T_TRAIT         => [
-            'start'  => [T_OPEN_CURLY_BRACKET => T_OPEN_CURLY_BRACKET],
-            'end'    => [T_CLOSE_CURLY_BRACKET => T_CLOSE_CURLY_BRACKET],
+        T_TRAIT => [
+            'start' => [T_OPEN_CURLY_BRACKET => T_OPEN_CURLY_BRACKET],
+            'end' => [T_CLOSE_CURLY_BRACKET => T_CLOSE_CURLY_BRACKET],
             'strict' => true,
             'shared' => false,
-            'with'   => [],
+            'with' => [],
         ],
-        T_USE           => [
-            'start'  => [T_OPEN_CURLY_BRACKET => T_OPEN_CURLY_BRACKET],
-            'end'    => [T_CLOSE_CURLY_BRACKET => T_CLOSE_CURLY_BRACKET],
+        T_USE => [
+            'start' => [T_OPEN_CURLY_BRACKET => T_OPEN_CURLY_BRACKET],
+            'end' => [T_CLOSE_CURLY_BRACKET => T_CLOSE_CURLY_BRACKET],
             'strict' => false,
             'shared' => false,
-            'with'   => [],
+            'with' => [],
         ],
-        T_DECLARE       => [
-            'start'  => [T_OPEN_CURLY_BRACKET => T_OPEN_CURLY_BRACKET],
-            'end'    => [T_CLOSE_CURLY_BRACKET => T_CLOSE_CURLY_BRACKET],
+        T_DECLARE => [
+            'start' => [T_OPEN_CURLY_BRACKET => T_OPEN_CURLY_BRACKET],
+            'end' => [T_CLOSE_CURLY_BRACKET => T_CLOSE_CURLY_BRACKET],
             'strict' => false,
             'shared' => false,
-            'with'   => [],
+            'with' => [],
         ],
-        T_NAMESPACE     => [
-            'start'  => [T_OPEN_CURLY_BRACKET => T_OPEN_CURLY_BRACKET],
-            'end'    => [T_CLOSE_CURLY_BRACKET => T_CLOSE_CURLY_BRACKET],
+        T_NAMESPACE => [
+            'start' => [T_OPEN_CURLY_BRACKET => T_OPEN_CURLY_BRACKET],
+            'end' => [T_CLOSE_CURLY_BRACKET => T_CLOSE_CURLY_BRACKET],
             'strict' => false,
             'shared' => false,
-            'with'   => [],
+            'with' => [],
         ],
-        T_WHILE         => [
-            'start'  => [
+        T_WHILE => [
+            'start' => [
                 T_OPEN_CURLY_BRACKET => T_OPEN_CURLY_BRACKET,
-                T_COLON              => T_COLON,
+                T_COLON => T_COLON,
             ],
-            'end'    => [
+            'end' => [
                 T_CLOSE_CURLY_BRACKET => T_CLOSE_CURLY_BRACKET,
-                T_ENDWHILE            => T_ENDWHILE,
+                T_ENDWHILE => T_ENDWHILE,
             ],
             'strict' => false,
             'shared' => false,
-            'with'   => [],
+            'with' => [],
         ],
-        T_DO            => [
-            'start'  => [T_OPEN_CURLY_BRACKET => T_OPEN_CURLY_BRACKET],
-            'end'    => [T_CLOSE_CURLY_BRACKET => T_CLOSE_CURLY_BRACKET],
+        T_DO => [
+            'start' => [T_OPEN_CURLY_BRACKET => T_OPEN_CURLY_BRACKET],
+            'end' => [T_CLOSE_CURLY_BRACKET => T_CLOSE_CURLY_BRACKET],
             'strict' => true,
             'shared' => false,
-            'with'   => [],
+            'with' => [],
         ],
-        T_SWITCH        => [
-            'start'  => [
+        T_SWITCH => [
+            'start' => [
                 T_OPEN_CURLY_BRACKET => T_OPEN_CURLY_BRACKET,
-                T_COLON              => T_COLON,
+                T_COLON => T_COLON,
             ],
-            'end'    => [
+            'end' => [
                 T_CLOSE_CURLY_BRACKET => T_CLOSE_CURLY_BRACKET,
-                T_ENDSWITCH           => T_ENDSWITCH,
+                T_ENDSWITCH => T_ENDSWITCH,
             ],
             'strict' => true,
             'shared' => false,
-            'with'   => [],
+            'with' => [],
         ],
-        T_CASE          => [
-            'start'  => [
-                T_COLON     => T_COLON,
+        T_CASE => [
+            'start' => [
+                T_COLON => T_COLON,
                 T_SEMICOLON => T_SEMICOLON,
             ],
-            'end'    => [
-                T_BREAK    => T_BREAK,
-                T_RETURN   => T_RETURN,
+            'end' => [
+                T_BREAK => T_BREAK,
+                T_RETURN => T_RETURN,
                 T_CONTINUE => T_CONTINUE,
-                T_THROW    => T_THROW,
-                T_EXIT     => T_EXIT,
+                T_THROW => T_THROW,
+                T_EXIT => T_EXIT,
             ],
             'strict' => true,
             'shared' => true,
-            'with'   => [
+            'with' => [
                 T_DEFAULT => T_DEFAULT,
-                T_CASE    => T_CASE,
-                T_SWITCH  => T_SWITCH,
+                T_CASE => T_CASE,
+                T_SWITCH => T_SWITCH,
             ],
         ],
-        T_DEFAULT       => [
-            'start'  => [
-                T_COLON     => T_COLON,
+        T_DEFAULT => [
+            'start' => [
+                T_COLON => T_COLON,
                 T_SEMICOLON => T_SEMICOLON,
             ],
-            'end'    => [
-                T_BREAK    => T_BREAK,
-                T_RETURN   => T_RETURN,
+            'end' => [
+                T_BREAK => T_BREAK,
+                T_RETURN => T_RETURN,
                 T_CONTINUE => T_CONTINUE,
-                T_THROW    => T_THROW,
-                T_EXIT     => T_EXIT,
+                T_THROW => T_THROW,
+                T_EXIT => T_EXIT,
             ],
             'strict' => true,
             'shared' => true,
-            'with'   => [
-                T_CASE   => T_CASE,
+            'with' => [
+                T_CASE => T_CASE,
                 T_SWITCH => T_SWITCH,
             ],
         ],
         T_START_HEREDOC => [
-            'start'  => [T_START_HEREDOC => T_START_HEREDOC],
-            'end'    => [T_END_HEREDOC => T_END_HEREDOC],
+            'start' => [T_START_HEREDOC => T_START_HEREDOC],
+            'end' => [T_END_HEREDOC => T_END_HEREDOC],
             'strict' => true,
             'shared' => false,
-            'with'   => [],
+            'with' => [],
         ],
-        T_START_NOWDOC  => [
-            'start'  => [T_START_NOWDOC => T_START_NOWDOC],
-            'end'    => [T_END_NOWDOC => T_END_NOWDOC],
+        T_START_NOWDOC => [
+            'start' => [T_START_NOWDOC => T_START_NOWDOC],
+            'end' => [T_END_NOWDOC => T_END_NOWDOC],
             'strict' => true,
             'shared' => false,
-            'with'   => [],
+            'with' => [],
         ],
     ];
 
